@@ -5,7 +5,6 @@ import dotenv from 'dotenv';
 dotenv.config();
 // Connect to MongoDB
 const uri = process.env.MONGODB_URI;
-console.log('MONGODB_URI:', uri);
 
 if (!uri) {
   throw new Error('Please define the MONGODB_URI environment variable');
@@ -13,7 +12,7 @@ if (!uri) {
 
 mongoose
   .connect(uri)
-  .then(() => console.log(`Connected to MongoDB at ${uri}`))
+  .then(() => console.log(`Connected to MongoDB`))
   .catch(err => console.error('Error connecting to MongoDB:', err));
 
 const db = mongoose.connection;

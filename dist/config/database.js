@@ -9,8 +9,6 @@ const dotenv_1 = __importDefault(require("dotenv"));
 dotenv_1.default.config();
 // Connect to MongoDB
 const uri = process.env.MONGODB_URI;
-console.log(process.env.MONGODB_URI);
-console.log('MONGODB_URI:', uri);
 if (!uri) {
     throw new Error('Please define the MONGODB_URI environment variable');
 }
